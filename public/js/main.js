@@ -99,7 +99,8 @@ $(document).ready(function () {
 
         const myOptions = {
             zoom: 19,
-            center: new google.maps.LatLng(lat, long)
+            center: new google.maps.LatLng(lat, long),
+            scrollwheel:true
         };
         const map = new google.maps.Map(document.getElementById("Modalmap"), myOptions);
 
@@ -107,10 +108,12 @@ $(document).ready(function () {
         //console.log(locations);
         geocoder.geocode( { 'address': oneline}, function(results, status) {
             if (status == 'OK') {
+                console.log(lat, long);
                 map.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
                     map: map,
-                    position: results[0].geometry.location,
+                    // position: results[0].geometry.location,
+                    position: new google.maps.LatLng(lat, long),
                     animation: google.maps.Animation.DROP
                 });
             } else {
@@ -1158,7 +1161,8 @@ function initMap(finalarray, lat, lng) {
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: new google.maps.LatLng(lat, lng),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel:true
     });
 
     var infowindow = new google.maps.InfoWindow();
@@ -1594,7 +1598,8 @@ function init() {
     var tmp;
     var myOptions = {
         zoom: 13,
-        center: new google.maps.LatLng(lat, lng)
+        center: new google.maps.LatLng(lat, lng),
+        scrollwheel:true
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
 
