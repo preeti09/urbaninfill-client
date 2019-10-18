@@ -182,9 +182,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a target="_blank" id="DetailHref"> <button type="button" class="btn btn-primary">Property Detail</button></a>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a target="_blank" id="DetailHref"> <button type="button" class="btn btn-primary">Property Detail</button></a>                    
                     <button type="button" id="SaveLink" class="btn btn-primary">Save Property</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
